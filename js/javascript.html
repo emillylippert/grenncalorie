@@ -1,0 +1,18 @@
+<script>
+// Função para posicionar imagens aleatoriamente
+function posicionarImagensAleatoriamente() {
+    var imagens = document.querySelectorAll('.random-image');
+    imagens.forEach(function(imagem) {
+        var left = Math.random() * (window.innerWidth - imagem.width);
+        var top = Math.random() * (window.innerHeight - imagem.height);
+        imagem.style.left = left + 'px';
+        imagem.style.top = top + 'px';
+    });
+}
+
+// Chame a função para posicionar as imagens quando a página for carregada
+window.addEventListener('load', posicionarImagensAleatoriamente);
+
+// Chame a função novamente quando a janela for redimensionada
+window.addEventListener('resize', posicionarImagensAleatoriamente);
+</script> 
